@@ -1,4 +1,4 @@
-const dbConfig = require("../config/dbConfig");
+const dbConfig = require("../dbconfig/dbConfig.js");
 const { Sequelize, DataTypes } = require("sequelize");
 
 
@@ -35,7 +35,7 @@ db.users = require("./userModel.js")(sequelize, DataTypes);
 db.questions = require("./questionModel.js")(sequelize,DataTypes);
 db.answers = require("./answerModel.js")(sequelize,DataTypes);
 db.guides = require("./guideModel.js")(sequelize, DataTypes);
-db.routes = require("./routeModel.js")(sequelize, DataTypes);
+db.attractions = require("./attractionModel.js")(sequelize, DataTypes);
 db.gallerys = require("./galleryModel.js")(sequelize, DataTypes);
 
 db.users.hasMany(db.gallerys)
@@ -53,7 +53,7 @@ db.answers.belongsTo(db.questions)
 db.users.hasMany(db.answers)
 db.answers.belongsTo(db.users)
 
-db.sequelize.sync({ force: false}).then(() => {
+db.sequelize.sync({ force: true}).then(() => {
   console.log("yes re-sync done");
 });
 

@@ -12,9 +12,9 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull : false
       },
-      media_type: {
+      difficulty:{
         type: DataTypes.STRING,
-        allowNull:false
+        allowNull : false
       },
       media_url:{
         type: DataTypes.STRING,

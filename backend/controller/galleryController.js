@@ -55,3 +55,20 @@ exports.getVideos = async(req,res)=>{
     }
     res.status(200).json({message:"Videos found successfully", videos})
 }
+
+exports.deletegalleryItem = async(req,res)=>{
+    const userId = req.userId
+    const id = req.params.id 
+    await gallerys.destroy({
+        where:{
+            id,
+            userId
+        }
+    })
+    if(!gallerys){
+        return res.status(404).json({message:"Gallery item not found"})
+        }
+        res.status(200).json({
+            message: "deleted successfully"
+        })
+}

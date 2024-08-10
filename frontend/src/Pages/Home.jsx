@@ -84,7 +84,7 @@ const Home = () => {
                <div>
                   <h1 className=" font-bold">Explore Attraction</h1>
                   <p>
-                     Ghandruk is a scenic village in Nepal's Annapurna region,
+                     Ghandruk is a scenic village in Nepal`s Annapurna region,
                      offering stunning views of Annapurna and Machhapuchhre
                      peaks.
                   </p>
@@ -99,7 +99,7 @@ const Home = () => {
                <div>
                   <h1 className=" font-bold">Explore Attraction</h1>
                   <p>
-                     Ghandruk is a scenic village in Nepal's Annapurna region,
+                     Ghandruk is a scenic village in Nepal`s Annapurna region,
                      offering stunning views of Annapurna and Machhapuchhre
                      peaks.
                   </p>
@@ -114,7 +114,7 @@ const Home = () => {
                <div>
                   <h1 className=" font-bold">Explore Attraction</h1>
                   <p>
-                     Ghandruk is a scenic village in Nepal's Annapurna region,
+                     Ghandruk is a scenic village in Nepal`s Annapurna region,
                      offering stunning views of Annapurna and Machhapuchhre
                      peaks.
                   </p>
@@ -122,11 +122,10 @@ const Home = () => {
             </div>
          </div>
 
-           {/* Finished */}
+         {/* Finished */}
 
-
-         <Review/>
-         <Footer/>
+         <Review />
+         <Footer />
       </>
    );
 };

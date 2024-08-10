@@ -53,7 +53,7 @@ db.answers.belongsTo(db.questions)
 db.users.hasMany(db.answers)
 db.answers.belongsTo(db.users)
 
-db.sequelize.sync({ force: true}).then(() => {
+db.sequelize.sync({ force: false}).then(() => {
   console.log("yes re-sync done");
 });
 

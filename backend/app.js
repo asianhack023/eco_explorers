@@ -14,6 +14,30 @@ app.use(cors({
     origin: '*'
 }))
 
+const cookies = require('cookie-parser');
+const { promisify } = require("util");
+app.use(cookies())
+
+const authRoute = require('./route/userRoute')
+const attractionRoute = require('./route/attractionRoute')
+app.use("",authRoute);
+app.use("",attractionRoute);
+
+// check the login user
+app.use(async (req,res,next)=>{
+    const token =  req.cookies.jwtToken 
+   try {
+     const decryptedResult =  await promisify(jwt.verify)(token,process.env.SECRET_KEY)
+     if(decryptedResult){
+         res.locals.authenticated = true 
+     }else{
+          res.locals.authenticated = false 
+     }
+   } catch (error) {
+     res.locals.authenticated = false 
+   }
+    next()
+ })
 
 app.get("/",(req,res)=>{
     res.send("Hello World")

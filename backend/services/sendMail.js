@@ -8,7 +8,7 @@ const sendEmail = async(data)=>{
         }
     })
     const mailOption={
-        from : "Eco_Explorers",
+        from :'"Eco_Explorers" <aashisrijal252@gmail.com>',
         to: data.email,
         subject: data.subject,
         text: data.text

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Explore from "../assets/Explore.png";
 import Footer from "../Components/Footer.jsx";
 import Review from "../Components/Review.jsx";
+import TopSection from "../Components/TopSection.jsx";
 
 const Home = () => {
    useEffect(() => {
@@ -25,38 +26,13 @@ const Home = () => {
 
    return (
       <>
-         <div className="relative h-screen w-screen overflow-hidden">
-            <div className="absolute top-0 left-0 w-full z-10">
-               <Navbar />
-            </div>
-
-            <video
-               src={hackvideo}
-               autoPlay
-               muted
-               loop
-               className="h-full w-full object-cover"
-            />
-
-            <div className="absolute top-[50%] left-[50%] transform -translate-x-[50%] -translate-y-[50%] text-center z-20 px-4 md:px-8 lg:px-16">
-               <h1 className="wonder text-white text-2xl md:text-3xl lg:text-4xl mb-4">
-                  Wonder More Worry Less
-               </h1>
-               <div className="text flex flex-col sm:flex-row justify-center items-center">
-                  <input
-                     type="text"
-                     placeholder="Find Your Next Adventure......"
-                     className="p-3 border-white border-2 bg-transparent w-full sm:w-[21rem] text-slate-400 rounded-l"
-                  />
-                  <FaSearch className="search text-white text-xl sm:text-2xl ml-2 mt-2 sm:mt-0" />
-               </div>
-            </div>
-         </div>
+    <TopSection/>
+    
          {/* About US */}
          <div className="flex p-4 mt-4 bg-white justify-center items-center">
             <div className=" bg-orange-600 w-24 h-[3px]"></div>{" "}
             <h1 className="text-black text-5xl font-semibold">
-               About <span className="font-semibold text-orange-600">Us</span>{" "}
+              About <span className="font-semibold text-orange-600">Us</span>{" "}
             </h1>
             <div className=" bg-orange-600 w-24 h-[3px]"></div>
          </div>
@@ -122,10 +98,11 @@ const Home = () => {
             </div>
          </div>
 
-         {/* Finished */}
+           {/* Finished */}
 
-         <Review />
-         <Footer />
+
+         <Review/>
+         <Footer/>
       </>
    );
 };

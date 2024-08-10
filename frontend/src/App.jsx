@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./Pages/Home";
-// import Attractions from "./components/Attractions.jsx";
-// import Gallery from "./components/Galary.jsx";
-// import About from "./components/About.jsx";
-// import Contact from "./components/Contact.jsx";
-// import Community from "./components/Community.jsx";
-// import RegisterGuide from "./components/RegisterGuide.jsx";
-// import Guides from "./components/Guides.jsx";
+// import Attractions from "./Pages/Attractions.jsx";
+// import Gallery from "./Pages/Galary.jsx";
+// import About from "./Pages/About.jsx";
+// import Contact from "./Pages/Contact.jsx";
+// import Community from "./Pages/Community.jsx";
+// import RegisterGuide from "./Pages/RegisterGuide.jsx";
+// import Guides from "./Pages/Guides.jsx";
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
         <Route path="/guides" element={<Guides />} /> */}
       </Routes>
     </BrowserRouter>
+    
   );
 };
 

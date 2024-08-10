@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route,  } from "react-router-dom";
+//Latest
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import Attractions from './Pages/Attraction.jsx'
 // import Gallery from "./Pages/Gallery.jsx";
-// import About from "./Pages/About.jsx";
 import Contact from "./Pages/Contact.jsx";
 // import Community from "./Pages/Community.jsx";
 import Guides from "./Pages/Guide.jsx";

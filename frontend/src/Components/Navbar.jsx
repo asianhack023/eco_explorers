@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { FaBars, FaTimes } from 'react-icons/fa';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,16 +27,16 @@ const Navbar = () => {
 
 
     setIsMenuOpen(false);
-    alert('Close button clicked'); // Temporary alert for debugging
+    console.log('Close button clicked'); // Temporary alert for debugging
 
-    navigate('/');
+    navigate('/home');
   };
   
 
   return (
     <nav className='navbar bg-transparent p-4 shadow-md'>
       <div className='container mx-auto flex justify-between items-center'>
-        <p className='text-white text-xl font-bold'>NEPXTOUR</p>
+        <Link to='/' className='text-white text-xl font-bold'>NEPXTOUR</Link>
         <div className='flex items-center md:hidden'>
           <button
             className='text-white text-2xl'
@@ -55,15 +56,12 @@ const Navbar = () => {
               <FaTimes /> {/* Close button that cross one */}
             </button>
           </div>
-          <li className='md:ml-4'><Link to='/' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Home</Link></li>
           <li className='md:ml-4'><Link to='/attractions' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Attractions</Link></li>
 
-          <li className='md:ml-4'><Link to='/trekking' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Trekking</Link></li>
           <li className='md:ml-4'><Link to='/gallery' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Gallery</Link></li>
-          <li className='md:ml-4'><Link to='/about' className='hover:text-slate-50 block px-4 py-2 md:px-0'>About</Link></li>
           <li className='md:ml-4'><Link to='/contact' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Contact</Link></li>
           <li className='md:ml-4'><Link to='/community' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Community</Link></li>
-          <li className='md:ml-4'><Link to='/register-guide' className='hover:text-slate-50 block px-4 py-2 md:px-0'>RegisterGuide</Link></li>
+          <li className='md:ml-4'><Link to='/loginsign' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Login/SignUp</Link></li>
           <li className='md:ml-4'><Link to='/guides' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Guides</Link></li>
         </ul>
       </div>

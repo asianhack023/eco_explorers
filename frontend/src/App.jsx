@@ -1,28 +1,26 @@
-import React from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// import Home from "./Pages/Home";
+import { BrowserRouter, Routes, Route,  } from "react-router-dom";
+import Home from "./Pages/Home.jsx";
 import Attractions from './Pages/Attraction.jsx'
-// import Gallery from "./Pages/Galary.jsx";
+// import Gallery from "./Pages/Gallery.jsx";
 // import About from "./Pages/About.jsx";
-// import Contact from "./Pages/Contact.jsx";
+import Contact from "./Pages/Contact.jsx";
 // import Community from "./Pages/Community.jsx";
-// import RegisterGuide from "./Pages/RegisterGuide.jsx";
-// import Guides from "./Pages/Guides.jsx";
+import Guides from "./Pages/Guide.jsx";
 import DetailAttraction from "./Pages/DetailAttraction.jsx";
+import LoginSignup from "./Pages/LoginSignup.jsx";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/attractions" element={<Attractions />} />
         {/* <Route path="/gallery" element={<Gallery />} /> */}
-        {/* <Route path="/about" element={<About />} /> */}
         <Route path='/detail' element={<DetailAttraction/>}/>
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
         {/* <Route path="/community" element={<Community />} /> */}
-        {/* <Route path="/register-guide" element={<RegisterGuide />} /> */}
-        {/* <Route path="/guides" element={<Guides />} /> */}
+        <Route path='/loginsign' element={<LoginSignup/>} />
+        <Route path="/guides" element={<Guides />} />
       </Routes>
     </BrowserRouter>
     

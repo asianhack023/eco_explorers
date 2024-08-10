@@ -11,7 +11,7 @@ import p10_img from "./Lumbini/build.jpg";
 import p11_img from "./Khaptad/flower.jpg";
 import p12_img from "./Janakpur/sita.jpg";
 import p13_img from "./Ilam/ilam.jpeg";
-import p14_img from "./Bhaktapur/statue.jpg";
+import p14_img from "./Bhaktapur/statue.jpeg";
 
 
 
@@ -29,7 +29,7 @@ let all_product =[
     
     {
         id: 2,
-        name: "ChitwanNp",
+        name: "Chitwan",
         image: p2_img,
         Rating: 4.1,
         Review: 13

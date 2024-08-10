@@ -30,7 +30,7 @@ const Guide = () => {
     return () => {
       console.log('Component will unmount');
     };
-  }, );
+  },);
 
   return (
     <div className="guide bg-slate-700">
@@ -42,19 +42,42 @@ const Guide = () => {
       {/* Render products if available */}
 
       {/* {!loading && !error && all_product.length > 0 ? ( */}
-        <div className="product-list">
-          {all_product.map((product) => (
-            <div key={product.id} className="product-item">
-              {/* Customize the rendering based on your product structure */}
-              <h2 className="text-white">{product.name}</h2>
-              <p className="text-gray-400">{product.description}</p>
-              {/* Add more product details here */}
+      <div className="product-list">
+        {/* {all_product.map((product) => ( */}
+        <div>
+          <div className="flex p-4 items-center shadow-xl bg-white gap-2 w-[45vw] h-52">
+            <div className="w-[35%] h-full">
+              <img
+                src="https://imgs.search.brave.com/tagkYKCXyNZyr9u7r8CrIMR0Qu7oDz0s14s2Cup1h2o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9waG90/b3Nub3cub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzA0/L2JlYXV0aWZ1bC1n/aXJsLXBob3RvXzIu/anBn"
+                alt="photo"
+                
+                className="object-cover h-full w-full"
+              />
             </div>
-          ))}
+            <div className="flex flex-col">
+              <p className='font-bold'>Anupama</p>
+              <div className="text-gray-500">Kathmandu,Nepal</div>
+              <hr />
+              <div>
+                <p>A girl who loves to to travel and make new friends</p>
+                <hr />
+                <div className='flex justify-evenly p-2'>
+                  <div className='flex flex-col items-center justify-evenly'>
+                    <div>Review</div>
+                    <div>12</div>
+                  </div>
+                  <div className='flex flex-col items-center justify-between'>
+                    <div>Review</div>
+                    <div>12</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* )) */}
         </div>
-      ) : (
-        !loading && !error && <p className="text-gray-300">No products found</p>
-      )}
+
+      </div>
     </div>
   );
 };

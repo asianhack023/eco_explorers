@@ -4,6 +4,8 @@ import gsap from "gsap";
 import hackvideo from "../assets/hack.mp4";
 import { useEffect } from "react";
 import Explore from "../assets/Explore.png";
+import Footer from "../Components/Footer.jsx";
+import Review from "../Components/Review.jsx";
 
 const Home = () => {
    useEffect(() => {
@@ -135,6 +137,8 @@ const Home = () => {
                </p>
             </div>
          </div>
+         <Review/>
+         <Footer/>
       </>
    );
 };

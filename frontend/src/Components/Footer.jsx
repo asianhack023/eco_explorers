@@ -1,7 +1,6 @@
-mport React from 'react'
+import React from 'react'
 
 
-import logo from "../assets/logo1.png";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -15,7 +14,7 @@ export default function Footer() {
       behavior: "smooth",
     });}
   return (
-    <div className='lg:px-10 xl:px-32 md:px-10 px-4 mt-32  bg-gradient-to-t pt-7 bg-primary text-white font-outfit'>
+    <div className='lg:px-10 xl:px-32 md:px-10 px-4 mt-32  bg-gradient-to-t pt-7 bg-orange-600 text-white font-outfit'>
     <div className=' flex md:justify-between md:flex-row flex-col justify-evenly  md:items-center items-start  mt-4'>
       <div className='flex md:hidden justify-between w-full'>
 
@@ -24,7 +23,8 @@ export default function Footer() {
       <div className="flex gap-3 items-center cursor-pointer " onClick={()=>{
            
           }}>
-            <img src={logo} alt="" className="lg:h-[60px] h-[50px]" />
+            {/* <img src={logo} alt="" className="lg:h-[60px] h-[50px]" /> */}
+            Logo
           </div>
 <p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>Qualitätsleads für Photovoltaik – Ihr Schlüssel zum Erfolg. Willkommen bei ESK
  </p>
@@ -86,7 +86,8 @@ export default function Footer() {
       <div className="flex gap-3 items-center cursor-pointer" onClick={()=>{
            
           }}>
-            <img src={logo} alt="" className="lg:h-[60px] h-[50px]" />
+            {/* <img src={logo} alt="" className="lg:h-[60px] h-[50px]" /> */}
+            Logo
           </div>
 <p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>Qualitätsleads für Photovoltaik – Ihr Schlüssel zum Erfolg. Willkommen bei ESK
  </p>

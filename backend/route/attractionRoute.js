@@ -5,6 +5,6 @@ const router = express.Router()
 const {multer,storage}= require('../middleware/multerConfig');
 const upload = multer({ storage:storage})
 
-router.route("/attraction").get(getAttraction).post(upload.array('image',3),createAttraction)
+router.route("/attraction").get(getAttraction).post(upload.single('image'),createAttraction)
 router.route('/attraction/:id').get(getSingleAttraction).delete(isAuthenticated,isAdmin,deleteAttraction)
 module.exports = router

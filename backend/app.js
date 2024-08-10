@@ -20,8 +20,12 @@ app.use(cookies())
 
 const authRoute = require('./route/userRoute')
 const attractionRoute = require('./route/attractionRoute')
+const guideRoute = require('./route/guideRoute')
+const galleryRoute = require('./route/galleryRoute')
 app.use("",authRoute);
 app.use("",attractionRoute);
+app.use("",guideRoute);
+app.use("",galleryRoute);
 
 // check the login user
 app.use(async (req,res,next)=>{

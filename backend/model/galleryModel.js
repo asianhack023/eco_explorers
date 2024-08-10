@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
         allowNull : false
       },
       media_type: {
-        type: DataTypes.STRING,
-        allowNull:false
+        type: DataTypes.STRING
+        
       },
       media_url:{
         type: DataTypes.STRING,

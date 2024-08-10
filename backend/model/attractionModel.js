@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       media_url:{
         type: DataTypes.STRING,
-        allowNull:false
+        allowNull : false
       }
     });
     return Attraction;

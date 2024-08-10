@@ -12,6 +12,21 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull:false
       },
+      rate:{
+        type: DataTypes.INTEGER
+        
+      },
+      location:{
+        type: DataTypes.STRING,
+        allowNull:false
+      },
+      review:{
+        type: DataTypes.STRING
+      },
+      identity:{
+        type: DataTypes.STRING,
+        allowNull: false
+      }
     });
     return Guide;
   };

@@ -2,7 +2,7 @@ import  { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,8 @@ const Navbar = () => {
   return (
     <nav className='navbar bg-transparent p-4 shadow-md'>
       <div className='container mx-auto flex justify-between items-center'>
-        <Link to='/' className='text-white text-xl font-bold'>NEPXTOUR</Link>
+      <Link to='/' >  <img src={logo} alt="" /></Link>
+        {/* <Link to='/' className='text-white text-xl font-bold'>NEPXTOUR</Link> */}
         <div className='flex items-center md:hidden'>
           <button
             className='text-white text-2xl'

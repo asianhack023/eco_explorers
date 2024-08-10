@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
@@ -6,6 +5,9 @@ import { FaLocationArrow } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import Navbar from "../Components/Navbar";
+import hackvideo from "../assets/hack.mp4";
+import OurFooter from "../Components/Footer";
 
 export default function ContactInfo() {
    const {
@@ -30,29 +32,20 @@ export default function ContactInfo() {
       } catch (error) {
          console.error("Error posting message:", error);
       }
-      // const formData = new FormData(event.target);
-      // //
-      // formData.append("access_key", "46aaeb8f-6072-48d7-a6e5-b3046012c396");
-      // // formData.append("access_key", "24f83073-78de-4ec2-9db8-ef377057fe08");
-
-      // const response = await fetch("https://api.web3forms.com/submit", {
-      //   method: "POST",
-      //   body: formData
-      // });
-
-      // const data = await response.json();
-
-      // if (data.success) {
-      //   setResult("Form Submitted Successfully");
-      //   toast.success("Form Submitted Successfully")
-      //   event.target.reset();
-      // } else {
-      //   console.log("Error", data);
-      //   toast.error(data.message)
-      //   setResult(data.message);
-      // }
+    
    };
    return (
+      <>
+       <div className="absolute top-0 left-0 w-full z-10 ">
+          <Navbar />
+        </div>
+        <video
+          src={hackvideo}
+          autoPlay
+          muted
+          loop
+          className="h-[50vh] w-full object-cover"
+        />
       <div className="flex lg:flex-row flex-col justify-between xl:px-32 md:px-10 px-3 bg-[#F4F3F3] p-20 font-outfit gap-3">
          <div className="bg-white lg:w-[55vw] w-[100%] md:p-10 p-3 lg:mt-0 mt-10">
             <p className="font-bold text-3xl text-primary">
@@ -216,7 +209,7 @@ export default function ContactInfo() {
                   </p>
                </div>
             </div>
-            <div className="h-[90px] md:w-[350px] w-[90vw] p-6 bg-white flex items-center gap-4">
+            <div className="h-[90px] md:w-[350px] w-[90vw] p-6 bg-white flex items-center gap-4 rounded-b-2xl">
                <div className="h-14 w-14 rounded-full bg-orange-600  flex items-center justify-center">
                   <FaLocationArrow className="text-white  " />
                </div>
@@ -229,5 +222,7 @@ export default function ContactInfo() {
             </div>
          </div>
       </div>
+      <OurFooter/>
+      </>
    );
 }

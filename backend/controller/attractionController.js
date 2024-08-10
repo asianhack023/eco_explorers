@@ -3,13 +3,13 @@ const { attractions } = require("../model")
 exports.createAttraction = async(req,res)=>{
     try {
         const { name,description,location, difficulty} = req.body
-        let media
+        let image
         if(req.file){
-            media = req.file.filename
+            image = req.file.filename
         }else{
-            media = ''
+            image = ''
         }
-        if(!name || !description || !location || !difficulty){
+        if( !name || !description || !location || !difficulty){
             return res.status(400).json({
                 message: "Please fill in all fields"
             })
@@ -19,7 +19,7 @@ exports.createAttraction = async(req,res)=>{
             description,
             location,
             difficulty,
-            media_url: media
+            media_url: image
 
         })
         res.status(200).json({
@@ -33,7 +33,7 @@ exports.createAttraction = async(req,res)=>{
 exports.getAttraction = async (req,res)=>{
     try {
         const attraction = await attractions.findAll();
-        if(attraction[0].length > 0){
+        if(attraction.length > 0){
         res.status(200).json({
             attractions: attraction
         })
@@ -56,7 +56,7 @@ exports.getSingleAttraction = async(req,res)=>{
             id
         }
     })
-    if(singleAttraction.length > 0){
+    if(singleAttraction){
         res.status(200).json({
             attraction: singleAttraction
             })
@@ -73,7 +73,7 @@ exports.deleteAttraction = async(req,res)=>{
         const [singleAttraction] = await attractions.destroy({
             where:{
                 id,
-                
+
             }
             }) 
     } catch (error) {

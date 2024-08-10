@@ -74,7 +74,7 @@ const Home = () => {
          </div>
 
          {/* services */}
-         <div className="flex p-3 justify-center p-4">
+         <div className="flex justify-center p-4">
             <div className="p-5 w-[25vw] ">
                <img
                   className="h-52 w-full object-cover  rounded-md"

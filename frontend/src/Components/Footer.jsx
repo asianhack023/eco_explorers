@@ -14,7 +14,7 @@ export default function Footer() {
       behavior: "smooth",
     });}
   return (
-    <div className='lg:px-10 xl:px-32 md:px-10 px-4 mt-32  bg-gradient-to-t pt-7 bg-orange-600 text-white font-outfit'>
+    <div className='lg:px-10 xl:px-32 md:px-10 px-4 mt-32  bg-gradient-to-t pt-7 bg-slate-500 text-white font-outfit'>
     <div className=' flex md:justify-between md:flex-row flex-col justify-evenly  md:items-center items-start  mt-4'>
       <div className='flex md:hidden justify-between w-full'>
 
@@ -29,18 +29,18 @@ export default function Footer() {
 <p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>Qualitätsleads für Photovoltaik – Ihr Schlüssel zum Erfolg. Willkommen bei ESK
  </p>
 <div className='flex gap-3 justify-start items-start lg:mt-0 pt-6' >
-       {/* <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
+       <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaFacebook/>
-       </div> */}
+       </div>
        <a href='https://www.instagram.com/esk_leads?igsh=MWg1MXdkZGdtb2M4YQ%3D%3D&utm_source=qr' target='_blank' className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaInstagram/>
        </a>
-       {/* <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
+       <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaYoutube/>
        </div>
        <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaXTwitter/>
-       </div> */}
+       </div>
       </div>
       </div>
       <div>
@@ -92,18 +92,18 @@ export default function Footer() {
 <p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>Qualitätsleads für Photovoltaik – Ihr Schlüssel zum Erfolg. Willkommen bei ESK
  </p>
 <div className='flex gap-3 justify-start items-start lg:mt-0 pt-6' >
-       {/* <div className='p-1 rounded-full  text-white cursor-pointer text-2xl '>
+       <div className='p-1 rounded-full  text-white cursor-pointer text-2xl '>
        <FaFacebook/>
-       </div> */}
+       </div>
        <a href='https://www.instagram.com/esk_leads?igsh=MWg1MXdkZGdtb2M4YQ%3D%3D&utm_source=qr' target='_blank' className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaInstagram/>
        </a>
-       {/* <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
+       <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaYoutube/>
-       </div> */}
-       {/* <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
+       </div>
+       <div className='p-1 rounded-full  text-white cursor-pointer text-2xl'>
        <FaXTwitter/>
-       </div> */}
+       </div>
       </div>
       </div>
       <div className='md:block hidden'>

@@ -13,7 +13,7 @@ export default function TopSection() {
     
   return (
     <div>
-        <div className="relative h-screen w-screen overflow-hidden">
+        <div className="relative h-screen  overflow-hidden">
         <div className="absolute top-0 left-0 w-full z-10 ">
           <Navbar />
         </div>

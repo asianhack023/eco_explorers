@@ -57,6 +57,7 @@ const Navbar = () => {
           </div>
           <li className='md:ml-4'><Link to='/' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Home</Link></li>
           <li className='md:ml-4'><Link to='/attractions' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Attractions</Link></li>
+
           <li className='md:ml-4'><Link to='/trekking' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Trekking</Link></li>
           <li className='md:ml-4'><Link to='/gallery' className='hover:text-slate-50 block px-4 py-2 md:px-0'>Gallery</Link></li>
           <li className='md:ml-4'><Link to='/about' className='hover:text-slate-50 block px-4 py-2 md:px-0'>About</Link></li>

@@ -1,36 +1,32 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import gsap from 'gsap';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import gsap from "gsap";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Use navigate for programmatic navigation
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const navigate = useNavigate();
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      'li',
-      { opacity: 0, y: 20 }, // Start state
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.1 } // End state
-    );
-  }, []);
+   useEffect(() => {
+      const tl = gsap.timeline();
+      tl.fromTo(
+         "li",
+         { opacity: 0, y: 20 }, // Start state
+         { opacity: 1, y: 0, duration: 0.8, delay: 0.1 } // End state
+      );
+   }, []);
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(prevState => !prevState);
-    console.log("Menu toggled"); // Debugging
-  };
+   const handleMenuToggle = () => {
+      setIsMenuOpen((prevState) => !prevState);
+      console.log("Menu toggled"); // Debugging
+   };
 
-  const handleCloseMenu = () => {
+   const handleCloseMenu = () => {
+      setIsMenuOpen(false);
+      alert("Close button clicked"); // Temporary alert for debugging
 
-
-
-    setIsMenuOpen(false);
-    alert('Close button clicked'); // Temporary alert for debugging
-
-    navigate('/');
-  };
-  
+      navigate("/");
+   };
 
   return (
     <nav className='navbar bg-transparent p-4 shadow-md'>

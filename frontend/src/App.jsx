@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-// import Home from "./Pages/Home";
+import Home from "./Pages/Home";
 import Attractions from './Pages/Attraction.jsx'
 // import Gallery from "./Pages/Galary.jsx";
 // import About from "./Pages/About.jsx";
@@ -14,7 +14,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/attractions" element={<Attractions />} />
         {/* <Route path="/gallery" element={<Gallery />} /> */}
         {/* <Route path="/about" element={<About />} /> */}

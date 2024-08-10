@@ -74,7 +74,7 @@ const Home = () => {
          </div>
 
          {/* services */}
-         <div className="flex p-3 justify-center p-4">
+         <div className="flex justify-center p-4">
             <div className="p-5 w-[25vw] ">
                <img
                   className="h-52 w-full object-cover  rounded-md"
@@ -84,7 +84,7 @@ const Home = () => {
                <div>
                   <h1 className=" font-bold">Explore Attraction</h1>
                   <p>
-                     Ghandruk is a scenic village in Nepal's Annapurna region,
+                     Ghandruk is a scenic village in Nepal`s Annapurna region,
                      offering stunning views of Annapurna and Machhapuchhre
                      peaks.
                   </p>
@@ -99,7 +99,7 @@ const Home = () => {
                <div>
                   <h1 className=" font-bold">Explore Attraction</h1>
                   <p>
-                     Ghandruk is a scenic village in Nepal's Annapurna region,
+                     Ghandruk is a scenic village in Nepal`s Annapurna region,
                      offering stunning views of Annapurna and Machhapuchhre
                      peaks.
                   </p>
@@ -114,7 +114,7 @@ const Home = () => {
                <div>
                   <h1 className=" font-bold">Explore Attraction</h1>
                   <p>
-                     Ghandruk is a scenic village in Nepal's Annapurna region,
+                     Ghandruk is a scenic village in Nepal`s Annapurna region,
                      offering stunning views of Annapurna and Machhapuchhre
                      peaks.
                   </p>
@@ -122,23 +122,10 @@ const Home = () => {
             </div>
          </div>
 
-         <div className="flex flex-col items-center">
-            <div className="">
-               <h1 className="text-4xl">
-                  <span className=" font-bold text-orange-600">What</span> our
-                  Client Say
-               </h1>
-            </div>
-            <div className="p-4">
-               <p className="text-center">
-                  Their expert guides showed me the best spots, including hidden
-                  gems I’d have missed. Everything was well-organized, making my
-                  journey stress-free and truly enjoyable. Highly recommended!
-               </p>
-            </div>
-         </div>
-         <Review/>
-         <Footer/>
+         {/* Finished */}
+
+         <Review />
+         <Footer />
       </>
    );
 };

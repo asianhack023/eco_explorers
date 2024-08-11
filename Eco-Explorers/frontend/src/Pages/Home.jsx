@@ -87,7 +87,7 @@ const Home = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 40 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="flex justify-center p-4"
+            className="flex justify-center p-4 gap-6"
          >
             <div className="p-5 w-[25vw] shadow-xl shadow-gray-300 rounded-md">
                <img

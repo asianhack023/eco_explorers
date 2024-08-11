@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import AfterSearch from "../Components/AfterSearch.jsx";
 import TopSection from "../Components/TopSection.jsx";
 import axios from "axios";
+import OurFooter from "../Components/Footer.jsx";
 export const imageurl = "http://localhost:3333/";
 
 const Attractions = () => {
@@ -39,11 +40,11 @@ const Attractions = () => {
       <>
          <TopSection />
 
-         <div className="attraction-b flex flex-wrap  mt-3 gap-4 ml-4 justify-evenly">
+         <div className="attraction-b flex flex-wrap  mt-5 rounded-md gap-4 ml-4 justify-evenly">
             {data.map((item, index) => (
                <div
                   key={index}
-                  className="w-full max-w-sm border border-gray-200 rounded-lg shadow bg-white  "
+                  className="w-full h-full max-w-[24vw]  shadow-xl my-4 shadow-gray-300 rounded-md  bg-white  "
                >
                   <Link to={`/attraction/${item.id}`}>
                      <img
@@ -66,7 +67,7 @@ const Attractions = () => {
                               <svg
                                  key={i}
                                  className={`w-4 h-4 ${
-                                    i < item.Rating
+                                    i < item.rating
                                        ? "text-yellow-300"
                                        : "text-gray-200"
                                  }`}
@@ -101,6 +102,8 @@ const Attractions = () => {
                </div>
             ))}
          </div>
+
+         <OurFooter/>
       </>
    );
 };

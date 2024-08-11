@@ -16,7 +16,7 @@ app.use(cors({
 
 const cookies = require('cookie-parser');
 const { promisify } = require("util");
-app.use(cookies())
+app.use(cookies());
 
 const authRoute = require('./route/userRoute')
 const attractionRoute = require('./route/attractionRoute')

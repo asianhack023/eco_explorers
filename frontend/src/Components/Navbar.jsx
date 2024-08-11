@@ -6,22 +6,22 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/logo.png'
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate(); // Use navigate for programmatic navigation
+   const [isMenuOpen, setIsMenuOpen] = useState(false);
+   const navigate = useNavigate();
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      'li',
-      { opacity: 0, y: 20 }, // Start state
-      { opacity: 1, y: 0, duration: 0.8, delay: 0.1 } // End state
-    );
-  }, []);
+   useEffect(() => {
+      const tl = gsap.timeline();
+      tl.fromTo(
+         "li",
+         { opacity: 0, y: 20 }, // Start state
+         { opacity: 1, y: 0, duration: 0.8, delay: 0.1 } // End state
+      );
+   }, []);
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(prevState => !prevState);
-    console.log("Menu toggled"); // Debugging
-  };
+   const handleMenuToggle = () => {
+      setIsMenuOpen((prevState) => !prevState);
+      console.log("Menu toggled"); // Debugging
+   };
 
   const handleCloseMenu = () => {
 

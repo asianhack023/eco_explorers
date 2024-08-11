@@ -19,6 +19,12 @@ module.exports = (sequelize, DataTypes) => {
       media_url:{
         type: DataTypes.STRING,
         allowNull : false
+      },
+      reviews:{
+        type: DataTypes.STRING
+      },
+      rating:{
+        type: DataTypes.INTEGER
       }
     });
     return Attraction;

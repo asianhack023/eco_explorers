@@ -1,4 +1,4 @@
-//Latest
+//Latestaashis
 import React from 'react'
 import { FaYoutube } from "react-icons/fa";
 
@@ -15,10 +15,10 @@ export default function OurFooter() {
       
     <div className=' md:w-[30%] w-[200px] md:hidden flex flex-col items-start '>
       <div className="flex gap-3 items-center cursor-pointer">
-          <p className='font-bold text-2xl text-white'>Pixels</p>
-            <p className="font-semibold text-base text-primary">Pixles</p>
+          <p className='font-bold text-2xl text-white'>NepTour</p>
+            <p className="font-semibold text-base text-primary">Travel and Discover with us</p>
           </div>
-<p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>At Pixels, we believe that every photograph has a story to tell. Whether it's a candid moment at a wedding, the intricate details of a product, or the serene beauty of a landscape, </p>
+<p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>we are here to guide you through every step of your journey. </p>
 <div className='flex gap-3 justify-start items-start lg:mt-0 pt-6' >
        <div className='p-1 rounded-full  text-white cursor-pointer'>
        <FaFacebook/>
@@ -68,7 +68,8 @@ export default function OurFooter() {
           
             <p className="font-semibold text-base text-primary">Pixels</p>
           </div>
-<p className='w-full font-light text-xs md:mt-14 mt-4 text-start '>At Pixels, we believe that every photograph has a story to tell. Whether it's a candid moment at a wedding, the intricate details of a product, or the serene beauty of a landscape, </p>
+<p className='w-full font-light text-sm md:mt-7 mt-4 text-start '>Discover breathtaking landscapes, rich cultural heritage, and unforgettable adventures. Whether you're seeking high-altitude treks
+   , serene lakes, or ancient temples, we are here to guide you through every step of your journey. </p>
 <div className='flex gap-3 justify-start items-start lg:mt-0 pt-6' >
        <div className='p-1 rounded-full  text-white cursor-pointer'>
        <FaFacebook/>
@@ -108,7 +109,7 @@ export default function OurFooter() {
      <div className=' flex flex-col lg:mt-0  space-y-4 pt-5 md:items-start text-sm lg:text-base font-normal items-center'>
      <p className='md:text-start text-center'>Shiva Mandir, Ring Rd,Kathmandu 44600</p>
 <p>+1 202-918-2132</p>
-<p>gmail@gmail.com</p>
+<p>neptour@gmail.com</p>
      </div>
       </div>
      
@@ -116,7 +117,7 @@ export default function OurFooter() {
      
     
     </div>
-      <p className='mt-10 text-center font-medium md:text-base text-sm'>Copyright © Pixels Will 2022. All Right Reserved</p>
+      <p className='mt-10 text-center font-medium md:text-base text-sm'>Copyright © NepTour 2024. All Right Reserved</p>
       </div>
   )
 }

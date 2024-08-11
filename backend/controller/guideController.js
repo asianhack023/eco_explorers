@@ -70,6 +70,7 @@ exports.registerGuide = async(req,res)=>{
 exports.getAllGuides = async(req,res)=>{
     try {
         const guide = await guides.findAll({
+            order: [['rate', 'DESC']],
             include:[
                 {
                     model: users

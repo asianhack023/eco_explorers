@@ -38,7 +38,7 @@ fetchData()
   }, [])
 
   return (
-    <div className="guide bg-slate-400">
+    <div className="guide bg-orange-600">
        <div className="fixed bottom-4 right-4">
         <Link to='/guide'
           
@@ -62,6 +62,7 @@ fetchData()
        
    
       </div>
+      <hr />
       <OurFooter/>
 
     </div>

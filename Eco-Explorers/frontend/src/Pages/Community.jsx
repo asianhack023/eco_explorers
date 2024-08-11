@@ -34,9 +34,9 @@ const Community = () => {
    };
 
    return (
-      <div className="bg-slate-500">
+      <div className="bg-orange-600">
          <Navbar />
-         <div className="flex flex-col h-screen">
+         <div className="flex flex-col h-[87vh]">
             {/* Header Section */}
             <header className="flex justify-between items-center p-4 bg-white shadow">
                <div className="flex items-center gap-4">
@@ -83,7 +83,7 @@ const Community = () => {
 
                   {/* Outgoing Message */}
                   <div className="flex items-center justify-end space-x-4">
-                     <div className="bg-blue-500 text-white p-4 rounded-xl max-w-xs">
+                     <div className="bg-orange-600 text-white p-4 rounded-xl max-w-xs">
                         <p>
                            For reaching to Hetauda,you can take a direct bus
                            from Kathmandu and can arrive there sir!
@@ -102,10 +102,10 @@ const Community = () => {
                <div className="flex items-center space-x-4 p-4 bg-white shadow rounded-full mt-4">
                   <input
                      type="text"
-                     placeholder="Aa"
+                     placeholder="Chat with Globle Here...."
                      value={message}
                      onChange={handleInputChange}
-                     className="flex-1 p-2 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
+                     className="flex-1 p-2 rounded-full focus:outline-none focus:border focus:border-orange-500"
                   />
                   {/* File Attachment Icon */}
                   <label className="cursor-pointer text-gray-500 hover:text-gray-700">
@@ -117,7 +117,7 @@ const Community = () => {
                      <AiOutlinePaperClip className="h-6 w-6" />
                   </label>
                   <button
-                     className="bg-blue-500 text-white py-2 px-4 rounded-full"
+                     className="bg-orange-500 text-white py-2 px-4 rounded-full"
                      onClick={handleSend}
                   >
                      Send

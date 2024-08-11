@@ -31,6 +31,8 @@ export default function TopSection() {
           <h1 className="wonder text-white font-semibold text-4xl md:text-3xl lg:text-4xl mb-4">
             <span className="text-orange-600">Wonder</span> More,  <span className="text-orange-600">Worry</span> Less
           </h1>
+          <div className=''>
+            
           <div className="text flex flex-col sm:flex-row justify-center items-center relative mt-5">
             <input
               type="text"
@@ -40,12 +42,21 @@ export default function TopSection() {
             />
             <FaSearch className="search text-orange-600 text-xl sm:text-2xl ml-2 mt-2 sm:mt-0 absolute right-4 top-[30%]" />
           </div>
-          {search!=="" && (
-            filteredObjects.map((e,i)=>{
-              return <AfterSearch/>
-            })
-          )}
-        </div>
+          {search !== "" && (
+                        <div className='max-h-[45vh] overflow-y-scroll mt-3 '>
+
+              {filteredObjects.map((e, i)=> {
+           return  <AfterSearch e={e}/>
+           })}
+          </div>
+           
+          )
+          
+          }
+        
+          </div>
+          </div>
+         
       </div>
     </div>
   )

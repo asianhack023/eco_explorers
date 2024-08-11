@@ -1,28 +1,29 @@
 //Latest
 import React from 'react'
-export default function GuideComponent() {
+import { imageurl } from '../Pages/Attraction'
+export default function GuideComponent({e}) {
   return (
     <div>
     <div className="flex p-4 items-center shadow-xl bg-white gap-5 w-[45vw] h-52">
       <div className="w-[35%] h-full">
         <img
-          src="https://imgs.search.brave.com/tagkYKCXyNZyr9u7r8CrIMR0Qu7oDz0s14s2Cup1h2o/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9waG90/b3Nub3cub3JnL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI0LzA0/L2JlYXV0aWZ1bC1n/aXJsLXBob3RvXzIu/anBn"
+          src={`${imageurl}${e.user.imageUrl}`}
           alt="photo"
           
           className="object-cover h-full w-full"
         />
       </div>
       <div className="flex flex-col">
-        <p className='font-bold text-2xl'>Anupama</p>
-        <div className="text-gray-500">Kathmandu,Nepal</div>
+        <p className='font-bold text-2xl'>{e.user.username}</p>
+        <div className="text-gray-500">{e.location}</div>
         <hr />
         <div>
-          <p className='py-3'>A girl who loves to to travel and make new friends</p>
+          <p className='py-3'>{e.bio.slice(0,60)}...</p>
           <hr />
           <div className='flex justify-between pt-2 px-10'>
             <div className='flex flex-col items-center justify-evenly'>
               <div>Review</div>
-              <div>12</div>
+              <div>{e.review}</div>
             </div>
             <div className='flex flex-col items-center justify-between'>
               <div>Review</div>

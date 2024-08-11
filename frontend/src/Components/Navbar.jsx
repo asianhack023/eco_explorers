@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <nav className='navbar bg-transparent p-4 shadow-md'>
       <div className='container mx-auto flex justify-between items-center'>
-      <Link to='/' >  <img src={logo} alt="" /></Link>
+      <Link to='/' >  <img className='h-9' src={logo} alt="" /></Link>
         {/* <Link to='/' className='text-white text-xl font-bold'>NEPXTOUR</Link> */}
         <div className='flex items-center md:hidden'>
           <button

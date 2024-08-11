@@ -1,4 +1,5 @@
 //Latest
+import axios from 'axios';
 import all_product from '../assets/assets';
 import GuideComponent from '../Components/GuideComponent';
 import Navbar from '../Components/Navbar';
@@ -9,31 +10,30 @@ const Guide = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const [data, setData] = useState([])
+  const fetchData = async () => {
+    const url = "https://ml292fp0-3333.inc1.devtunnels.ms/guide";
+  try {
+    const res = await axios.get(url, {
+      headers: {
+        "Content-Type":"application/json"
+      }
+    })
+    console.log(res.data)
+    console.log(res.status)
+    
+    console.log(res.data.guide)
+    setData(res.data.guide)
+  } catch (error) {
+    console.log(error)
+    
+  }
+}
   useEffect(() => {
-    // Fetch data when component mounts
-    // const fetchData = async () => {
-    //   try {
-    //     const response = await fetch('https://fb41-202-51-68-213.ngrok-free.app/guide');
-    //     if (!response.ok) {
-    //       throw new Error('Network response was not ok');
-    //     }
-    //     const data = await response.json();
-    //     console.log('Fetched products:', data); // Log fetched data
-    //     setAll_product(all_product);
-    //   } catch (error) {
-    //     console.error('Fetch error:', error);
-    //     setError(error.message);
-    //   } finally {
-    //     setLoading(false);
-    //   }
-    // };
+     
+fetchData()
 
-    // fetchData();
-
-    return () => {
-      console.log('Component will unmount');
-    };
-  },);
+  }, [])
 
   return (
     <div className="guide bg-slate-700">
@@ -46,8 +46,8 @@ const Guide = () => {
 
       {/* {!loading && !error && all_product.length > 0 ? ( */}
       <div className="flex flex-wrap gap-3 justify-center mt-10">
-        {all_product.map((product) => (
-          <GuideComponent />
+        {data.map((product) => (
+          <GuideComponent e={product}/>
         ))}
        
    

@@ -3,15 +3,44 @@ import { Link } from "react-router-dom";
 import all_product from '../assets/assets.js';
 import hackvideo from "../assets/hack.mp4";
 import Navbar from "../Components/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AfterSearch from "../Components/AfterSearch.jsx";
 import TopSection from "../Components/TopSection.jsx";
+import axios from 'axios'
+export const imageurl = "https://ml292fp0-3333.inc1.devtunnels.ms/"
+
+
 const Attractions = () => {
 
   const [search, setsearch] = useState("");
   const filteredObjects = all_product.filter((obj) =>
     obj.name.toLowerCase().includes(search.toLowerCase())
   );
+  const [data, setData] = useState([])
+  const fetchData = async () => {
+    const url = "https://ml292fp0-3333.inc1.devtunnels.ms/attraction";
+  try {
+    const res = await axios.get(url, {
+      headers: {
+        "Content-Type":"application/json"
+      }
+    })
+    console.log(res.body)
+    console.log(res.status)
+    
+    console.log(res.data.attractions)
+    setData(res.data.attractions)
+  } catch (error) {
+    console.log(error)
+    
+  }
+}
+  useEffect(() => {
+     
+fetchData()
+
+  }, [])
+  
   
   return (
     <>
@@ -51,12 +80,12 @@ const Attractions = () => {
       </div> */}
 
       <div className="attraction-b flex flex-wrap  mt-3 gap-2 ml-4 justify-evenly">
-        {all_product.map((item, index) => (
+        {data.map((item, index) => (
           <div key={index} className="w-full max-w-sm border border-gray-200 rounded-lg shadow bg-white  ">
             <Link to={`/attraction/${item.id}`}>
               <img
                 className="rounded-t-lg h-48 w-full object-cover"
-                src={item.image}
+                src={`${imageurl}${item.media_url}`}
                 alt={item.name}
               />
             </Link>
@@ -85,13 +114,13 @@ const Attractions = () => {
                 </div>
 
                 <span className="bg-blue-100 text-blue-800 text-sm ml-6 font-semibold p-3 rounded">
-                  {item.Rating}
+                  {item.rating}
                 </span>
               </div>
 
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-bold text-gray-900">
-                  Reviews: {item.Review}
+                  Reviews: {item.rating+index}
                 </span>
 
                 <Link to="/detail"

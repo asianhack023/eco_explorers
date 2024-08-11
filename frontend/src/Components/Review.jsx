@@ -1,5 +1,6 @@
-import React from "react";
-import InfiniteSlider from "./InfinitySlider";
+//Latest
+import React from 'react'
+import InfiniteSlider from './InfinitySlider'
 
 export default function Review() {
     const slides=[

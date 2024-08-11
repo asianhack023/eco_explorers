@@ -1,4 +1,4 @@
-import { FaSearch } from "react-icons/fa";
+//Latest
 import { Link } from "react-router-dom";
 import all_product from '../assets/assets.js';
 import hackvideo from "../assets/hack.mp4";

@@ -106,7 +106,7 @@ export default function OurFooter() {
       <div className='md:w-[20%] w-[50%] md:block hidden xl:-mt-5 mt-0'>
       <h1 className='font-bold text-xl lg:mt-0 mt-4 md:text-start text-center'>Contact us</h1>
      <div className=' flex flex-col lg:mt-0  space-y-4 pt-5 md:items-start text-sm lg:text-base font-normal items-center'>
-     <p className='md:text-start text-center'>P8P6+29Q, Shiva Mandir, Ring Rd,Kathmandu 44600</p>
+     <p className='md:text-start text-center'>Shiva Mandir, Ring Rd,Kathmandu 44600</p>
 <p>+1 202-918-2132</p>
 <p>gmail@gmail.com</p>
      </div>

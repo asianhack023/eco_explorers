@@ -1,4 +1,4 @@
-//Latest
+
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import Attractions from './Pages/Attraction.jsx'

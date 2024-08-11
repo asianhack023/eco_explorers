@@ -1,4 +1,4 @@
-//Latest
+
 import { FaSearch } from "react-icons/fa";
 import Navbar from "../Components/Navbar.jsx";
 import gsap from "gsap";

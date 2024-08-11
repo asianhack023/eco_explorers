@@ -1,10 +1,13 @@
 //Latest
 import React from 'react'
 import { imageurl } from '../Pages/Attraction'
+import OurFooter from './Footer'
+
 export default function GuideComponent({e}) {
   return (
+    <>
     <div>
-    <div className="flex p-4 items-center shadow-xl bg-white gap-5 w-[45vw] h-52">
+    <div className="flex p-4 items-center shadow-xl bg-white gap-5 w-[45vw] h-[40vh] mb-5 mt-5 mr-5">
       <div className="w-[35%] h-full">
         <img
           src={`${imageurl}${e.user.imageUrl}`}
@@ -18,7 +21,7 @@ export default function GuideComponent({e}) {
         <div className="text-gray-500">{e.location}</div>
         <hr />
         <div>
-          <p className='py-3'>{e.bio.slice(0,60)}...</p>
+          <p className='py-3'>{e.bio.slice(0,100)}...</p>
           <hr />
           <div className='flex justify-between pt-2 px-10'>
             <div className='flex flex-col items-center justify-evenly'>
@@ -26,7 +29,7 @@ export default function GuideComponent({e}) {
               <div>{e.review}</div>
             </div>
             <div className='flex flex-col items-center justify-between'>
-              <div>Review</div>
+              <div>Rating</div>
               <div className='flex items-center gap-2'>
               {[...Array(5)].map((_, i) => (
               <svg
@@ -46,7 +49,10 @@ export default function GuideComponent({e}) {
         </div>
       </div>
     </div>
+
+
     {/* )) */}
   </div>
+      </>
   )
 }

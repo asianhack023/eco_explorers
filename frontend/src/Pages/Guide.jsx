@@ -4,6 +4,7 @@ import all_product from '../assets/assets';
 import GuideComponent from '../Components/GuideComponent';
 import Navbar from '../Components/Navbar';
 import { useEffect, useState } from 'react';
+import OurFooter from '../Components/Footer';
 
 const Guide = () => {
   // const [all_product, setAll_product] = useState([]);
@@ -52,6 +53,7 @@ fetchData()
        
    
       </div>
+      < OurFooter />
     </div>
   );
 };

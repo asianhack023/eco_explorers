@@ -21,7 +21,7 @@ export default function Review() {
     ]
   return (
     <div className='font-poppins  mx-auto w-[100%] px-3 xl:px-32 md:px-16 md:mb-40 mb-16 md:mt-32 mt-10'>
-        <p className='md:text-5xl text-3xl font-semibold text-center'>Words from Our Customers</p>
+        <p className='md:text-5xl text-3xl font-semibold text-center'>Words <span className="font-semibold text-orange-600">from</span> Our <span className="font-semibold text-orange-600">Customers</span> </p>
         <p className='md:text-base text-xs font-poppins font-normal text-center md:px-10 mt-2'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.....</p>
         <InfiniteSlider slides={slides}/>
     </div>

@@ -4,7 +4,7 @@ import { imageurl } from '../Pages/Attraction'
 export default function GuideComponent({e}) {
   return (
     <div>
-    <div className="flex p-4 items-center shadow-xl bg-white gap-5 w-[45vw] h-52">
+    <div className="flex p-4 items-center shadow-xl bg-white gap-5 w-[45vw] h-56 mb-5 ml-4">
       <div className="w-[35%] h-full">
         <img
           src={`${imageurl}${e.user.imageUrl}`}

@@ -4,6 +4,8 @@ import all_product from '../assets/assets';
 import GuideComponent from '../Components/GuideComponent';
 import Navbar from '../Components/Navbar';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import OurFooter from '../Components/Footer';
 
 const Guide = () => {
   // const [all_product, setAll_product] = useState([]);
@@ -12,7 +14,7 @@ const Guide = () => {
 
   const [data, setData] = useState([])
   const fetchData = async () => {
-    const url = "https://ml292fp0-3333.inc1.devtunnels.ms/guide";
+    const url = "http://localhost:3333/guide";
   try {
     const res = await axios.get(url, {
       headers: {
@@ -36,7 +38,15 @@ fetchData()
   }, [])
 
   return (
-    <div className="guide bg-slate-700">
+    <div className="guide bg-slate-400">
+       <div className="fixed bottom-4 right-4">
+        <Link to='/guide'
+          
+          
+          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg">
+                  Register As a Guide
+               </Link>
+            </div>
       <Navbar />
       {/* Handle loading state
       {loading && <p>Loading...</p>}
@@ -52,6 +62,8 @@ fetchData()
        
    
       </div>
+      <OurFooter/>
+
     </div>
   );
 };

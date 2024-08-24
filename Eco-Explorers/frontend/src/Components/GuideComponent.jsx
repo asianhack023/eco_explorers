@@ -8,7 +8,7 @@ export default function GuideComponent({e}) {
     <>
     <div>
     <div className="flex p-4 items-center shadow-xl bg-white gap-5 w-[45vw] h-[40vh] mb-5 mt-5 mr-5">
-      <div className="w-[35%] h-full">
+      <div className="w-[50%] h-full">
         <img
           src={`${imageurl}${e.user.imageUrl}`}
           alt="photo"

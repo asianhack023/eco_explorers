@@ -40,13 +40,16 @@ export default function ContactInfo() {
        <div className="absolute top-0 left-0 w-full z-10 ">
           <Navbar />
         </div>
-        <video
+        {/* <video
           src={hackvideo}
           autoPlay
           muted
           loop
           className="h-[50vh] w-full object-cover"
-        />
+        /> */}
+         <img src="https://www.searchenginejournal.com/wp-content/uploads/2022/08/contact-us-2-62fa2cc2edbaf-sej.png" alt="photo"
+         className="h-[50vh] w-full object-cover"
+         />
       <div className="flex lg:flex-row flex-col justify-between xl:px-32 md:px-10 px-3 bg-[#F4F3F3] p-20 font-outfit gap-3">
          <div className="bg-white lg:w-[55vw] w-[100%] md:p-10 p-3 lg:mt-0 mt-10">
             <p className="font-bold text-3xl text-primary">
@@ -63,7 +66,7 @@ export default function ContactInfo() {
                            type="text"
                            placeholder="First Name"
                            name="Surname"
-                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600 ${
+                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-orange-600 focus:bg-white caret-blue-600 ${
                               errors.Vorname
                                  ? "border-red-500"
                                  : "border-[#808080]"
@@ -83,7 +86,7 @@ export default function ContactInfo() {
                            type="text"
                            name="Nachname"
                            placeholder="Last Name  "
-                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600 ${
+                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:orange-600 focus:bg-white caret-blue-600 ${
                               errors.nachname
                                  ? "border-red-500"
                                  : "border-[#808080]"
@@ -105,7 +108,7 @@ export default function ContactInfo() {
                            type="text"
                            name="Firmenadresse"
                            placeholder="Address"
-                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600 ${
+                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-orange-600 focus:bg-white caret-blue-600 ${
                               errors.firmenadresse
                                  ? "border-red-500"
                                  : "border-[#808080]"
@@ -125,7 +128,7 @@ export default function ContactInfo() {
                            type="text"
                            name="Telefonnummer"
                            placeholder="Phone Number                       "
-                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600 ${
+                           className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:orange-blue-600 focus:bg-white caret-blue-600 ${
                               errors.number
                                  ? "border-red-500"
                                  : "border-[#808080]"
@@ -146,7 +149,7 @@ export default function ContactInfo() {
                         type="email"
                         name="E-Mail-Adresse"
                         placeholder="E-Mail Address"
-                        className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600 ${
+                        className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-orange-600 focus:bg-white caret-blue-600 ${
                            errors.Email_Adresse
                               ? "border-red-500"
                               : "border-[#808080]"
@@ -166,7 +169,7 @@ export default function ContactInfo() {
                         type="text"
                         name="Message"
                         placeholder="Message"
-                        className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600 ${
+                        className={`block w-full p-4  text-black placeholder-[#808080] placeholder:font-normal transition-all duration-200 border border-greyneutral rounded-[10px] bg-white focus:outline-none focus:border-orange-600 focus:bg-white caret-blue-600 ${
                            errors.Nachricht
                               ? "border-red-500"
                               : "border-[#808080]"

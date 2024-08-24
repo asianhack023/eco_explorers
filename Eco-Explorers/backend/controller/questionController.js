@@ -28,7 +28,6 @@ exports.createMessage = async(req, res) => {
 
 exports.getLoginUserMsg = async (req, res) => {
     const userId = req.userId;
-
     try {
         const userMsg = await questions.findAll({
             where: { userId },

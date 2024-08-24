@@ -46,11 +46,15 @@ exports.handleLogin = async(req,res)=>{
         }
     });
     if(!user){
-        return res.status(400).json({message:"Invalid email or password"});
+        return res.status(400).json({
+            message:"Invalid email or password"
+        });
         }
         const isValidPassword = await bcrypt.compare(password,user.password);
         if(!isValidPassword){
-            return res.status(400).json({message:"Invalid email or password"});
+            return res.status(400).json({
+                message:"Invalid email or password"
+            });
             }
             // store the user into token
             const token = jwt.sign({id:user.id},process.env.SECRET_KEY,{
@@ -67,7 +71,21 @@ exports.handleLogin = async(req,res)=>{
 }
 
 exports.handleLogout = (req,res)=>{
-    res.clearCookie("jwtToken")
-    res.status(200).json({message:"Logged out successfully"});
+    res.clearCookie("jwtToken");
+    res.status(200).json({
+        message:"Logged out successfully"
+    });
 
+}
+exports.getAllUser = async(req,res)=>{
+    const user = await users.findAll();
+    res.status(200).json(user);
+
+}
+exports.deleteUser = async(req,res)=>{
+    const id = req.params.id;
+    const user = await users.destroy({where:{id}});
+    res.status(200).json({
+        message:"User deleted successfully"
+    });
 }

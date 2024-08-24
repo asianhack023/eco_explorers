@@ -114,3 +114,49 @@ exports.getSingleGuide = async(req,res)=>{
         guide
         })
 }
+exports.orderGuide = async(req,res)=>{
+    const id = req.params.id;
+    const userId = req.userId;
+    const [userDetail] = await users.findAll({
+        where:{
+            id:userId
+        }
+    })
+
+    const [guideDetail] = await guides.findAll({
+        where:{
+            id
+        },
+        include:[
+        {
+            model: users
+        }
+        ]
+    })
+    if(guideDetail.availability == 'yes'){
+        sendEmail({
+            email: guideDetail.user.email ,
+            subject:`${userDetail.username} INVITED FOR GUIDE` ,
+            text: `You are order by the client to be guide
+            ${userDetail.imageUrl}
+            Name: ${userDetail.username}
+            Email: ${userDetail.email}
+            `
+        })
+        sendEmail({
+            email: userDetail.email,
+            subject: `YOUR GUIDE ORDER PLACED`,
+            text: `You guide Details
+            Name:  ${guideDetail.user.username}
+            Image: ${userDetail.imageUrl}
+            Email: ${guideDetail.user.email}
+            LanguageSpoken: ${guideDetail.language_spoken}
+            Location: ${guideDetail.location} `
+
+        })
+    }else{
+        res.status(400).json({
+            message: "Guide is not available right now"
+            })
+    }
+}
